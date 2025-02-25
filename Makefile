@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -O2 -I.
 
 # Source files
-SRCS = chunk.c debug.c main.c memory.c value.c
+SRCS = chunk.c debug.c main.c memory.c value.c vm.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
@@ -21,7 +21,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
 # Compile each .c file into an object file
-%.o: %.c chunk.h common.h debug.h memory.h value.h
+%.o: %.c chunk.h common.h debug.h memory.h value.h vm.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Clean up build files
