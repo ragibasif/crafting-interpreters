@@ -1,4 +1,6 @@
-# clox
+# crafting interpreters
+
+- only doing the second part where the interpreter is written in C
 
 [https://craftinginterpreters.com/](https://craftinginterpreters.com/)
 
